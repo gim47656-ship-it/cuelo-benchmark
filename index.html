@@ -1,4 +1,7 @@
 <!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CUELO 하네스 벤치마크</title>
+<meta name="description" content="CUELO는 omp(oh-my-pi)를 위한 오픈소스 AI 코딩 에이전트 작업 공간이자 하네스입니다. 이 페이지는 CUELO, Claude Code, Codex의 코딩 과제 비교 결과와 측정 조건을 제공합니다.">
+<link rel="canonical" href="https://gim47656-ship-it.github.io/cuelo-benchmark/">
+<meta name="robots" content="index, follow">
 <style>
 body{font:15px/1.5 system-ui,"Malgun Gothic",sans-serif;margin:0;background:#f8f9fa;color:#212529}
 main{max-width:1080px;margin:0 auto;padding:32px 20px}
@@ -24,6 +27,8 @@ table{width:100%;border-collapse:collapse;margin:0 0 16px}th,td{text-align:left;
 /*report*/.baall h3,.dlh3{font-size:15px;margin:18px 0 4px}.bacard{border-top:1px solid #e9ecef;padding-top:4px;margin-top:14px}.baall code{font-size:12px}.baall .plain,.caveat,.ov,.ovl,.ovn{word-break:keep-all}.caveat{background:#fff4e6;border-left:3px solid #d9480f;padding:8px 12px;margin:0 0 14px;font-size:13px}.ov{border:2px solid #d9480f}.ovg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 14px}.ovc{background:#f8f9fa;border-radius:8px;padding:12px}.ovc b{display:block;font-size:26px;line-height:1.2;color:#2b8a3e;font-variant-numeric:tabular-nums}.ovh{display:block;font-weight:600;font-size:13px;margin-top:4px}.ovs{display:block;font-size:12px;color:#495057;margin-top:2px}.ovl{margin:0 0 10px;padding-left:20px}.ovl li{margin:0 0 6px}.ovn{font-size:13px;background:#fff4e6;border-radius:6px;padding:8px 12px;margin:0 0 8px}@media (max-width:720px){.ovg{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.bacard{break-inside:avoid}.ovg{grid-template-columns:repeat(4,minmax(0,1fr))}}/*/report*/
 </style><main>
 <h1>CUELO 하네스 벤치마크</h1>
+<p><a href="https://github.com/gim47656-ship-it/CUELO"><strong>CUELO</strong></a>는 omp(oh-my-pi)를 위한 오픈소스 AI 코딩 에이전트 작업 공간이자 하네스입니다.</p>
+<p lang="en"><a href="https://github.com/gim47656-ship-it/CUELO">CUELO</a> is an open-source AI coding agent workspace and harness for omp (oh-my-pi). This benchmark compares coding workflows and delegation configurations used by CUELO.</p>
 <p class="sub">같은 AI 모델에게 같은 코딩 과제를 주고, 그 AI를 부리는 "도구"만 바꿔 비교했다. CUELO(우리가 만든 도구), Claude Code, Codex 세 가지다. 정답 여부는 AI가 미리 볼 수 없는 채점 테스트로 판정했고, 모든 값은 여러 번 돌린 결과의 가운데 값이다.</p>
 <!-- overview --><section class="ov"><h2>한눈에 보기</h2>
 <div class="ovg"><div class="ovc"><b>42% 빠름</b><span class="ovh">어려운 과제 · Claude Code 대비</span><span class="ovs">같은 AI(Opus 5.5), 정답 같음 · 요금 6% 저렴</span></div><div class="ovc"><b>−37%</b><span class="ovh">고친 뒤 초대형 과제 시간</span><span class="ovs">25분 39초 → 16분 13초 · 테스트 953 → 957/960</span></div><div class="ovc"><b>−43%</b><span class="ovh">고친 뒤 보통 과제 요금</span><span class="ovs">$0.76 → $0.44 · 정답 그대로</span></div><div class="ovc"><b>절반</b><span class="ovh">하위 AI를 소형 모델로</span><span class="ovs">요금 $6.81 → $3.37 · 대신 시간 2.6배</span></div></div>
